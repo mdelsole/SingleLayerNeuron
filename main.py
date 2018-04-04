@@ -12,16 +12,14 @@ for iteration in range(1000):
     sigmoid = 1/(1+np.exp(-z))
     error = (y - sigmoid)
     sigmoidDerivative = sigmoid * (1 - sigmoid)
-    # How can one adjustment apply to all weights?
-    adjustment = np.dot(x.T, error*sigmoidDerivative)
-    synaptic_weights += adjustment
+    synaptic_weights += np.dot(x.T, error*sigmoidDerivative)
 
 print("New synaptic weights after training: ")
 print(synaptic_weights)
 
 print("Considering new situation: [0,1,1]")
 newZ = np.dot(np.array([0,1,1]), synaptic_weights)
-newSigmoid = 1/(1+np.exp(-newZ))
-print(newSigmoid)
+activationOutput = 1/(1+np.exp(-newZ))
+print(activationOutput)
 
 
