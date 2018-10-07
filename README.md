@@ -1,6 +1,8 @@
 # SingleNeuron
 A one-neuron machine learning program made from scratch. It is trained to detect patterns in a series of 1's and 0's.
 
+I wrote an article on how to make this: https://medium.com/@michaeldelsole/a-single-layer-artificial-neural-network-in-20-lines-of-python-ae34b47e5fef 
+
 Examples:
 
 [1,0,1] -> [1] 
